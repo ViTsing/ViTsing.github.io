@@ -1,7 +1,7 @@
 ---
 # Leave the homepage title empty to use the site title
-title: ""
-date: 2022-10-24
+title: "Home Page of Ming Dong"
+date: 2024-12-10
 type: landing
 
 design:
@@ -12,7 +12,7 @@ sections:
   - block: resume-biography-3
     content:
       # Choose a user profile to display (a folder name within `content/authors/`)
-      username: admin
+      username: Ming Dong
       text: ""
       # Show a call-to-action button under your biography? (optional)
       button:

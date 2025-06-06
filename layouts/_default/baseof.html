@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon" href="{{ .Site.Params.favicon }}">
 </head>
 <body>
+    {{ partial "language-switcher.html" . }}
     <nav>
         <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 2rem; justify-content: center;">
             {{ range .Site.Menus.main }}
@@ -17,7 +18,7 @@
             {{ end }}
         </ul>
     </nav>
-    <main>
+    <main style="max-width: 800px; margin: 0 auto; padding: 2rem;">
         {{ block "main" . }}{{ end }}
     </main>
     <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #eaecef;">

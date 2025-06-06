@@ -5,8 +5,30 @@
 # Default language
 en:
   languageCode: en-us
-  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
-  #contentDir: content/en
+  contentDir: content/en
+  title: Ming Dong's Academic Homepage
+  params:
+    description: Academic homepage of Ming Dong
+  menu:
+    main:
+      - name: About
+        url: '#about'
+        weight: 10
+      - name: Projects
+        url: '#projects'
+        weight: 20
+      - name: Publications
+        url: '#publications'
+        weight: 30
+      - name: Teaching
+        url: '#teaching'
+        weight: 40
+      - name: Service
+        url: '#service'
+        weight: 50
+      - name: Contact
+        url: '#contact'
+        weight: 60
 
 # Uncomment the lines below to configure your website in a second language.
 #zh:

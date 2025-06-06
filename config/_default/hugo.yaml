@@ -4,15 +4,16 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name
-title: Hugo Academic CV Theme
+title: Ming Dong
 # Website URL
-baseURL: 'https://example.com/'
+baseURL: 'https://vitsing.github.io/'
 
 ############################
 ## LANGUAGE
 ############################
 
 defaultContentLanguage: en
+languageCode: en-us
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
@@ -35,7 +36,7 @@ permalinks:
   authors: '/author/:slug/'
 disableAliases: true
 outputs:
-  home: [HTML, RSS, headers, redirects, backlinks]
+  home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
   section: [HTML, RSS]
 imaging:
   resampleFilter: lanczos
@@ -52,5 +53,28 @@ markup:
     lineNos: false
 security:
   _merge: deep
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^WC_
 sitemap:
   _merge: deep
+
+params:
+  theme: minimal
+  font: native
+  appearance: light
+  highlight: true
+
+  header:
+    navbar:
+      enable: true
+      align: r
+      show_logo: true
+      show_language: false
+      show_search: true
+      highlight_active_link: true
+
+module:
+  imports:
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5

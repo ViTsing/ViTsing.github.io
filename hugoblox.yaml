@@ -1,2 +1,6 @@
 build:
   hugo_version: '0.136.5'
+
+module:
+  imports:
+    - path: github.com/HugoBlox/hugo-blox-builder/modules/blox-bootstrap/v5

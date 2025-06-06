@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+    {{ $style := resources.Get "css/custom.css" | resources.Minify }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    <link rel="icon" type="image/x-icon" href="{{ .Site.Params.favicon }}">
+</head>
+<body>
+    <nav>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 2rem; justify-content: center;">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    <footer style="text-align: center; margin-top: 4rem; padding: 2rem 0; border-top: 1px solid #eaecef;">
+        <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
+    </footer>
+</body>
+</html> 
